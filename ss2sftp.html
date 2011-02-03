@@ -24,11 +24,9 @@ function ss_to_sftp(){
 </script>
 </head>
 <body>
-<p>Simply drag this link to the bookmark bar:</p>
+<p>Simply drag this link to your browser's bookmark bar:  <a href="javascript:function ss_to_sftp(){var host=document.location.host;var path=document.location.hash;if (host!='www.strongspace.com'){alert('You do not appear to be at strongspace!');return;}var m=path.match(/^#\w+/i);if (m==null){alert('you do not appear to be viewing a file');return;}m=m[0];var username=m.substring(1);var realpath=path.substring(m.length);var url='sftp://'+username+'.strongspace.com//strongspace/'+username+realpath;document.location=url;};ss_to_sftp();">ss2sftp</a></p>
 
-<a href="javascript:function ss_to_sftp(){var host=document.location.host;var path=document.location.hash;if (host!='www.strongspace.com'){alert('You do not appear to be at strongspace!');return;}var m=path.match(/^#\w+/i);if (m==null){alert('you do not appear to be viewing a file');return;}m=m[0];var username=m.substring(1);var realpath=path.substring(m.length);var url='sftp://'+username+'.strongspace.com//strongspace/'+username+realpath;document.location=url;};ss_to_sftp();">ss2sftp</a>
-
-<p>and click it when viewing a location in the Strongspace web client to be taken to the same location in your system's default sftp client, e.g. Expandrive or Transmit.</p>
+<p>Then click it when viewing a location in the Strongspace web client to be taken to the same location in your system's default sftp client, e.g. Expandrive or Transmit.</p>
 
 <p>Source:</p>
 
