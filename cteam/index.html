@@ -223,12 +223,14 @@
           $('#generate-text').prop("disabled", false);
           $('#tutorial').remove();
           var gentext = data.text;
-          if ($("#prefix").length & $("#prefix").val() != '') {
+          if ($("#prefix").length && $("#prefix").val() != '') {
             var pattern = new RegExp('^' + $("#prefix").val(), 'g');
             var gentext = gentext.replace(pattern, '<strong>' + $("#prefix").val() + '</strong>');
           }
 
           var gentext = gentext.replace(/\n\n/g, "<div><br></div>").replace(/\n/g, "<div></div>");
+          // respect the falcon
+          gentext = gentext.replaceAll("amy", "trys");
           var html = '<div class=\"gen-box\">' + gentext + '</div><div class="gen-border"></div>';
           $(html).appendTo('#model-output').hide().fadeIn("slow");
         },
